@@ -15,22 +15,13 @@ A .NET Core 5.0  MVC online course project which users can register-login to sys
       <a href="#home">Home Page</a>
     </li>
         <li>
-      <a href="#blog-details">Blog Details</a>
+      <a href="#register--login">Register & Login</a>
     </li>
         <li>
-      <a href="#about-us-page">About Us Page</a>
+      <a href="#user-panel">User Panel</a>
     </li>
         <li>
-      <a href="#contact-us-page">Contact Us Page</a>
-    </li>
-        <li>
-      <a href="#authors">Authors</a>
-    </li>
-        <li>
-      <a href="#admins">Admins</a>
-    </li>
-        <li>
-      <a href="#contact">Contact Me</a>
+      <a href="#admin-panel">Admin Panel</a>
     </li>
   </ol>
 </details>
