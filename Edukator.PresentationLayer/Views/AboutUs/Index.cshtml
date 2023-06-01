@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Edukator | Hakkımızda";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+
+
+@await Component.InvokeAsync("_BannerPartial")
+
+@await Component.InvokeAsync("_AboutDescPartial")
+
+
+<!--//w3l-aboutblock1-->
+<!-- features-section -->
+@await Component.InvokeAsync("_WhyChooseUsPartial")
+<!-- features section -->
+<!--/team-sec-->
+@await Component.InvokeAsync("_MeetOurTeachersPartial")
+<!--//team-sec-->
+<!--/progress-->
+@await Component.InvokeAsync("_ProgressPartial")
+<!--//progress-->
+<!--/w3l-project-->
+@await Component.InvokeAsync("_JoinUsPartial")
+<!--//w3l-project-->

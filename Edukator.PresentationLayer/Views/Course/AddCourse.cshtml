@@ -1,0 +1,38 @@
+﻿@model Edukator.EntityLayer.Concrate.Course
+@{
+    ViewData["Title"] = "Edukator | Kurs Ekle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-white bg-primary">Yeni Kurs Ekle</div>
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label for="socialmedianame" class="form-label">Kurs Başlığı</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" asp-for="CourseTitle">
+                </div>
+                <div class="mb-3">
+                    <label for="socialmediaurl" class="form-label">Fiyat</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" asp-for="Price">
+                </div>
+                <div class="mb-3">
+                    <label for="socialmediaurl" class="form-label">Değerlendirme</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" asp-for="Review">
+                </div>
+                <div class="mb-3">
+                    <label for="socialmediaurl" class="form-label">Kategori</label>
+                    @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.v,new {@class="form-control"})
+                </div>
+                <div class="mb-3">
+                    <label for="socialmediaurl" class="form-label">Açıklama</label>
+                    <textarea class="form-control" rows="5" asp-for="CourseDescription"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Ekle</button>
+                <a href="/Course/Index/" class="btn btn-danger">Vazgeç</a>
+            </form>
+        </div>
+
+    </div>
+</div>

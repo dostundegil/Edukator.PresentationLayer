@@ -1,0 +1,33 @@
+﻿@model List<Edukator.EntityLayer.Concrate.AppUser>
+@{
+    ViewData["Title"] = "Edukator | Kullanıcı Rolleri";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="container">
+    <div class="card">
+        <div class="card-header text-white bg-primary">Kullanıcı Rolleri</div>
+        <div class="card-body">
+            <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ad Soyad</th>
+                    <th scope="col">Rol Ata</th>
+                </tr>
+            </thead>
+            <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+
+                            <th scope="row">@item.Id</th>
+                            <td>@item.Name @item.Surname</td>
+                            <td> <a href="/RoleAssign/UserRoleAssign/@item.Id" class="btn btn-danger">Rol Ata</a> </td>
+                        </tr>
+                        }
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+

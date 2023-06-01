@@ -1,0 +1,38 @@
+﻿@model List<Edukator.EntityLayer.Concrate.AppUser>
+@{
+    ViewData["Title"] = "Edukator | Kullanıcılar";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="col-sm-12 col-xl-12">
+        <div class="card">
+            <div class="card-header text-white bg-primary">
+                Öğrenci Listesi
+            </div>
+            <div class="card-body">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Ad Soyad</th>
+                        <th scope="col">Şehir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count += 1;
+                            <tr>
+
+                                <th scope="row">@count</th>
+                                <td>@item.Name @item.Surname</td>
+                                <td>@item.City</td>
+                            </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

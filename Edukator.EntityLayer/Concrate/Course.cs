@@ -14,8 +14,14 @@ namespace Edukator.EntityLayer.Concrate
 
         public string CourseDescription { get; set; }
 
+        public string ImageUrl { get; set; }
+
         public decimal Price { get; set; }
 
         public int Review { get; set; }
+
+        public int CategoryID { get; set; }
+        public Category Category { get; set; }
+        public List<CourseRegister> CourseRegisters { get; set; }
     }
 }

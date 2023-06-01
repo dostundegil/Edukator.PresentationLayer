@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @await Component.InvokeAsync("_HeadPartial")
+</head>
+<body>
+    @await Component.InvokeAsync("_NavbarPartial")
+    @RenderBody()
+    @await Component.InvokeAsync("_FooterPartial")
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    @await Component.InvokeAsync("_ScriptsPartial")
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Edukator | İletişim";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+@await Component.InvokeAsync("_DefaultContactBannerPartial")
+
+
+
+@await Component.InvokeAsync("_DefaultContactUsPartial")
+
+
+@await Html.PartialAsync("~/Views/DefaultContact/SendMessage.cshtml")
+@await Component.InvokeAsync("_DefaultContactMapInfoPartial")

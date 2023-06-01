@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Edukator | Ana Sayfa";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+
+    @await Component.InvokeAsync("_FeaturePartial") 
+    <!-- /bottom-grids-->
+    @await Component.InvokeAsync("_AboutGridPartial")
+    <!-- //bottom-grids-->
+    <!--/about-section -->
+    @await Component.InvokeAsync("_AboutPartial")
+    <!--//about-section -->
+    <!--/home-stats-->
+    @await Component.InvokeAsync("_StatisticPartial")
+    <!--//home-stats-->
+    <!--/popular-Courses-->
+    @await Component.InvokeAsync("_CoursePartial")
+    <!--//popular-Courses-->
+    <!--/testimonials-->
+    @await Component.InvokeAsync("_TestimonialPartial")
+    <!-- //testimonials -->
+    <!--/subscribe-->
+    @await Html.PartialAsync("~/Views/Default/AddMailSubscribe.cshtml")
+    <!--//subscribe-->

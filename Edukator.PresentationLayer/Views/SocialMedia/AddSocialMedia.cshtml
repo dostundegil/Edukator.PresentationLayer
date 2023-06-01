@@ -1,0 +1,27 @@
+﻿@model Edukator.EntityLayer.Concrate.SocialMedia
+@{
+    ViewData["Title"] = "Edukator | Yeni Sosyal Medya";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="container">
+    <div class="card">
+        <div class="card-header text-white bg-primary">Yeni Sosyal Medya</div>
+        <div class="card-body">
+        <form method="post">
+            <div class="mb-3">
+                <label for="socialmedianame" class="form-label">Sosyal Medya Başlığı</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" asp-for="SocialMediaName">
+            </div>
+            <div class="mb-3">
+                <label for="socialmediaicon" class="form-label">Sosyal Medya İkonu</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" asp-for="SocialMediaIcon">
+            </div>
+            <div class="mb-3">
+                <label for="socialmediaurl" class="form-label">Sosyal Medya Linki</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" asp-for="SocialMediaUrl">
+            </div>
+            <button type="submit" class="btn btn-primary">Ekle</button>
+        </form>
+    </div>
+</div>
+</div>

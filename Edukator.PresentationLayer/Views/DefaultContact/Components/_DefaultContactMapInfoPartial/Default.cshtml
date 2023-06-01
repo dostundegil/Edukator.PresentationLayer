@@ -1,0 +1,8 @@
+﻿@model List<Edukator.EntityLayer.Concrate.MapInfo>
+<div class="contacts-sub-5">
+    @foreach (var item in Model)
+    {
+    <iframe src="@item.MapInfoUrl"
+            style="border:0" allowfullscreen></iframe>
+    }
+</div>

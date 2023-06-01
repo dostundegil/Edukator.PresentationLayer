@@ -1,0 +1,62 @@
+﻿@model UserEditViewModel
+@{
+    ViewData["Title"] = "Edukator | Ayarlar";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="card">
+    <div class="card-header text-white bg-primary">
+        Profili Düzenle
+    </div>
+    <div class="card-body">
+        
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+            <div class="col-sm">
+                <div class="mb-3">
+                    <label>Kullanıcı Adınız</label>
+                    <input type="text" readonly asp-for="Username" class="form-control" />
+                </div>
+            </div>
+        </div>
+            <div class="row">
+
+                <div class="col-sm">
+
+                    <div class="mb-3">
+                        <label>Ad</label>
+                        <input type="text" asp-for="Name" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Mail Adresiniz</label>
+                        <input type="email" asp-for="Mail" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Şifre</label>
+                        <input type="password" asp-for="Password" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="mb-3">
+                        <label>Soyad</label>
+                        <input type="text" asp-for="Surname" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Resim Yolu</label>
+                        <input type="file" asp-for="Image" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Şifre Tekrar</label>
+                        <input type="password" asp-for="ConfirmPassword" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <input type="checkbox" asp-for="ChangePassword" class="form-check-input" />
+                        <label class="form-check-label" for="ChangePassword">Şifremi Değiştir</label>
+                    </div>
+                </div>
+
+                <br />
+            </div>
+            <button class="btn btn-outline-primary">Bilgileri Güncelle</button>
+        </form>
+    </div>
+</div>

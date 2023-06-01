@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("PartialHead.cshtml")
+<script>
+    function deleteItem(itemId) {
+        Swal.fire({
+            title: 'Silmek istediğinden emin misin?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Evet, sil!',
+            cancelButtonText: 'İptal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Silme işlemi yapmak için gereken kodu burada yazabilirsin
+                const deleteUrl = `${itemId}`;
+                window.location.href = deleteUrl;
+            }
+        });
+    }
+</script>
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        @await Html.PartialAsync("PartialSpinner.cshtml")
+        <!-- Spinner End -->
+        <!-- Sidebar Start -->
+        @await Html.PartialAsync("PartialSideBar.cshtml")
+        <!-- Sidebar End -->
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+
+            @await Html.PartialAsync("PartialNavbar.cshtml")
+            <!-- Navbar End -->
+            <!-- Blank Start -->
+
+            <div class="container-fluid pt-4 px-4">
+                @RenderBody()
+            </div>
+            <!-- Blank End -->
+            <!-- Footer Start -->
+            @await Html.PartialAsync("PartialFooter.cshtml")
+            <!-- Footer End -->
+
+        </div>
+        <!-- Content End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    @await Html.PartialAsync("PartialScript.cshtml")
+    <!-- JavaScript Libraries -->
+
+</body>
+
+</html>

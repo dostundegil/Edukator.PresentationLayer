@@ -1,0 +1,32 @@
+﻿@model List<Edukator.EntityLayer.Concrate.CourseRegister>
+@{
+    ViewData["Title"] = "Edukator | Kurslarım";
+    Layout = "~/Areas/Member/Views/MemberLayout/Index.cshtml";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-white bg-primary">Kurslarım</div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Kurs Adı</th>
+                        <th scope="col">Detaylar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Course.CourseTitle</td>
+                            <td><a href="#" class="btn btn-outline-dark">Kursa Git</a></td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+</div>

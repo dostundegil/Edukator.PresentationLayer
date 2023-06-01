@@ -1,0 +1,47 @@
+﻿@model List<Edukator.EntityLayer.Concrate.AboutUs>
+<section class="w3l-features py-5" id="work">
+    <div class="container py-lg-5 py-md-4 py-2">
+        @foreach (var item in Model)
+        {
+        <div class="row main-cont-wthree-2 align-items-center">
+            <div class="col-lg-6 feature-grid-left pr-lg-5">
+                <h5 class="title-subw3hny">Neden Biz</h5>
+                <h3 class="title-w3l mb-4">
+                     @item.Title2
+                </h3>
+                <p class="text-para">
+                    @item.Description2
+                </p>
+            </div>
+            <div class="col-lg-6 feature-grid-right mt-lg-0 mt-5 pl-lg-5">
+                <div class="call-grids-w3 d-grid">
+                    <div class="grids-1 box-wrap">
+                        <div class="icon">
+                            <i class="@item.FeatureIcon1"></i>
+                        </div>
+                        <h4><a href="about.html" class="title-head">@item.FeatureTitle1</a></h4>
+                    </div>
+                    <div class="grids-1 box-wrap">
+                        <div class="icon">
+                                <i class="@item.FeatureIcon2"></i>
+                        </div>
+                            <h4><a href="about.html" class="title-head">@item.FeatureTitle2</a></h4>
+                    </div>
+                    <div class="grids-1 box-wrap">
+                        <div class="icon">
+                                <i class="@item.FeatureIcon3"></i>
+                        </div>
+                            <h4><a href="about.html" class="title-head">@item.FeatureTitle3</a></h4>
+                    </div>
+                    <div class="grids-1 box-wrap">
+                        <div class="icon">
+                                <i class="@item.FeatureIcon4"></i>
+                        </div>
+                            <h4><a href="about.html" class="title-head">@item.FeatureTitle4</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</section>

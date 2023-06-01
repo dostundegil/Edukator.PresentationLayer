@@ -1,0 +1,67 @@
+﻿@model List<RoleAssignViewModel>
+@{
+    ViewData["Title"] = "Edukator | Kullanıcı Rol Atama";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    string yetki = "";
+}
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-white bg-primary">Kullanıcı Rol Atama</div>
+        <div class="card-body">
+            <form method="post">
+                <div class="row">
+
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <div class="col-4">
+                            <div class="form-check">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="row">
+                                            <div class="col-sm"> </div>
+                                            <div class="col-sm">
+
+                                                <input type="checkbox" asp-for="@Model[i].RoleExist" class="form-check-input" />
+                                                <label class="form-check-label" for="@Model[i].RoleExist">@Model[i].RoleName</label>
+                                            </div>
+                                            <div class="col-sm"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        @if (Model[i].RoleName == "Admin")
+                                        {
+                                            yetki = "Kullanıcı Silme / Vitrin Düzenleme / Rol Atama - Silme / Kurs, Kategori Ekleme - Güncelleme - Silme ";
+
+                                        }
+                                        @if (Model[i].RoleName == "Member")
+                                        {
+                                            yetki = "Kursları Görüntüleme / Kurs Satın Alma / Vitrin Sayfasında Gezinme ";
+
+                                        }
+                                        @if (Model[i].RoleName == "Member")
+                                        {
+                                            yetki = "Kursları Görüntüleme / Kurs Ekleme / Kendi Kurslarını Güncelleme";
+
+                                        }
+                                        @yetki
+                                    </div>
+                                </div>
+                                <input type="hidden" asp-for="@Model[i].RoleID" />
+                                <input type="hidden" asp-for="@Model[i].RoleName" />
+                            </div>
+                        </div>
+
+                    }
+                </div>
+                <div class="mt-2 ml-2">
+                <button class="btn btn-success ">Kaydet</button>
+                <a href="/RoleAssign/Index/" class="btn btn-danger">Vazgeç</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

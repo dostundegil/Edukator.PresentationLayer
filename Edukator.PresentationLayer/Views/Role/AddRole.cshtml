@@ -1,0 +1,22 @@
+﻿@model Edukator.EntityLayer.Concrate.AppRole
+@{
+    ViewData["Title"] = "Edukator | Yeni Rol";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-white bg-primary">Roller</div>
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label for="socialmedianame" class="form-label">Rol Adı</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" asp-for="Name">
+                </div>
+                <button type="submit" class="btn btn-primary">Ekle</button>
+                <a href="/Role/Index/" class="btn btn-danger">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>
+

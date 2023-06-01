@@ -11,6 +11,9 @@ namespace Edukator.EntityLayer.Concrate
     {
         [Key]
         public int CategoryID { get; set; }
+
         public string CategoryName { get; set; }
+
+        public List<Course> Courses { get; set; }
     }
 }

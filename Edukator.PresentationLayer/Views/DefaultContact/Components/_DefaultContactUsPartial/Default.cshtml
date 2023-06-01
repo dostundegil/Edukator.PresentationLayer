@@ -1,0 +1,45 @@
+﻿@model List<Edukator.EntityLayer.Concrate.ContactInfo>
+<div class="w3l-contact-10 py-5" id="contact">
+    <div class="form-41-mian pt-lg-4 pt-md-3 pb-lg-4">
+        <div class="container">
+            <div class="heading text-center mx-auto">
+                <h5 class="title-subw3hny text-center">Bizimle İletişime Geçin</h5>
+                <h3 class="title-w3l">Bir <span class="inn-text">Sorunuz </span> mu Var?</h3>
+            </div>
+            <div class="contacts-5-grid-main mt-5">
+                <div class="contacts-5-grid">
+                    <div class="map-content-5">
+                        <div class="d-grid grid-col-2">
+                            <div class="contact-type">
+                                @foreach (var item in Model)
+                                {
+                                <div class="address-grid">
+                                    <h6><span class="fas fa-map-marked-alt"></span> Adres</h6>
+                                        <p>@item.Addres1</p>
+
+                                </div>
+                                <div class="address-grid">
+                                    <h6><span class="fas fa-envelope-open-text"></span> Mail</h6>
+                                        <a href="mailto:@item.Mail1" class="link1">@item.Mail1</a>
+                                        <a href="mailto:@item.Mail2"
+                                           class="link1">@item.Mail2</a>
+
+                                </div>
+                                <div class="address-grid">
+                                    <h6><span class="fas fa-phone-alt"></span> Telefon</h6>
+                                        <a href="tel:+@item.Phone1" class="link1">+@item.Phone1</a>
+                                        <a href="tel:+@item.Phone2      " class="link1">+@item.Phone2</a>
+
+                                </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+
+
+

@@ -1,0 +1,39 @@
+﻿@model List<Edukator.EntityLayer.Concrate.Message>
+@{
+    ViewData["Title"] = "Edukator | Mesajlar";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-white bg-primary">Mesajlar</div>
+        <div class="card-body">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">İsim</th>
+                        <th scope="col">Konu</th>
+                        <th scope="col">Detaylar</th>
+                        <th scope="col">Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="col">@item.MessageID</th>
+                            <th scope="row">@item.Name</th>
+                            <td>@item.Subject</td>
+                            <td><a href="/Messsage/MessageDetails/@item.MessageID" class="btn btn-outline-dark">Detaylar</a></td>
+                            <td><a href="#" id="deleteButton" onclick="deleteItem('/Messsage/DeleteMessage/@item.MessageID')" class="btn btn-outline-danger">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+
